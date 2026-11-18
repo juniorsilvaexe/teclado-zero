@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#050505">
+  <meta name="description" content="Aprenda a tocar teclado começando do zero com o curso online TECLADO DO ZERO e suas aulas em vídeo.">
+  <meta property="og:title" content="TECLADO DO ZERO | Comece sua jornada musical">
+  <meta property="og:description" content="Mesmo sem nunca ter tocado uma tecla, comece a aprender teclado com aulas em vídeo.">
+  <title>TECLADO DO ZERO — Aprenda a tocar teclado do zero</title>
+  <style>
+    :root {
+      --bg:#050505; --panel:#101010; --panel2:#151515; --white:#f6f6f4;
+      --muted:#a3a3a3; --line:rgba(255,255,255,.11); --soft:rgba(255,255,255,.06);
+      --max:1160px; --radius:20px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:88px}
+    body{margin:0;background:var(--bg);color:var(--white);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.55}
+    a{color:inherit;text-decoration:none}
+    button{font:inherit}
+    .wrap{width:min(var(--max),calc(100% - 44px));margin-inline:auto}
+    .topbar{position:sticky;top:0;z-index:20;background:rgba(5,5,5,.82);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+    .nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{display:flex;align-items:center;gap:11px;font-weight:850;letter-spacing:.09em;font-size:13px}
+    .brand-mark{width:34px;height:27px;border:1px solid #777;border-radius:5px;display:flex;align-items:flex-start;gap:2px;padding:3px;background:#eee;position:relative;overflow:hidden}
+    .brand-mark i{display:block;background:#080808;width:5px;height:13px;border-radius:0 0 2px 2px;z-index:1}
+    .brand-mark:after{content:"";position:absolute;left:0;right:0;bottom:0;height:9px;background:linear-gradient(90deg,#fff 0 14%,#ddd 14% 16%,#fff 16% 32%,#ddd 32% 34%,#fff 34% 50%,#ddd 50% 52%,#fff 52% 68%,#ddd 68% 70%,#fff 70% 86%,#ddd 86% 88%,#fff 88%)}
+    .nav-links{display:flex;align-items:center;gap:28px;color:#bdbdbd;font-size:13px}
+    .nav-links a:hover{color:#fff}
+    .nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:1px solid #fff;background:#f5f5f2;color:#080808;padding:14px 22px;border-radius:999px;font-weight:850;font-size:12px;letter-spacing:.055em;text-transform:uppercase;transition:transform .2s,background .2s,box-shadow .2s}
+    .nav-cta{padding:11px 17px;font-size:11px}
+    .btn:hover,.nav-cta:hover{transform:translateY(-2px);background:#fff;box-shadow:0 12px 35px rgba(255,255,255,.12)}
+    .btn:focus-visible,a:focus-visible,summary:focus-visible{outline:2px solid white;outline-offset:4px}
+    .hero{min-height:690px;display:grid;grid-template-columns:1fr 1.05fr;align-items:center;gap:35px;padding-top:72px;padding-bottom:80px;overflow:hidden}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;color:#c5c5c5;font-size:10px;font-weight:800;letter-spacing:.2em;text-transform:uppercase}
+    .eyebrow:before{content:"";width:25px;height:1px;background:#aaa}
+    h1{font-size:clamp(42px,6vw,76px);line-height:.99;letter-spacing:-.065em;margin:22px 0 22px;max-width:660px}
+    h1 span{color:#929292}
+    .hero-copy{color:#b5b5b5;font-size:17px;max-width:470px;margin:0 0 29px}
+    .hero-actions{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+    .price-inline{font-size:23px;font-weight:850;letter-spacing:-.04em}
+    .price-inline small{display:block;color:#888;font-size:10px;letter-spacing:.14em;text-transform:uppercase;font-weight:650}
+    .micro{margin-top:22px;color:#777;font-size:11px}
+    .hero-art{position:relative;min-height:490px;display:grid;place-items:center}
+    .glow{position:absolute;width:78%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.13),rgba(255,255,255,.025) 48%,transparent 70%);filter:blur(10px)}
+    .hero-art svg{position:relative;width:112%;max-width:700px;overflow:visible;filter:drop-shadow(0 35px 38px rgba(0,0,0,.8))}
+    .art-label{position:absolute;right:4%;bottom:7%;border:1px solid var(--line);background:rgba(10,10,10,.76);backdrop-filter:blur(12px);padding:13px 17px;border-radius:12px;color:#bbb;font-size:10px;letter-spacing:.12em;text-transform:uppercase}
+    section{padding:105px 0;border-top:1px solid var(--line)}
+    .section-head{max-width:650px;margin-bottom:48px}
+    .kicker{color:#888;font-size:10px;font-weight:800;letter-spacing:.2em;text-transform:uppercase}
+    h2{font-size:clamp(32px,4.2vw,52px);line-height:1.05;letter-spacing:-.055em;margin:14px 0}
+    .section-intro{color:var(--muted);font-size:15px;max-width:560px}
+    .learn-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}
+    .learn-card{background:linear-gradient(145deg,#151515,#0b0b0b);border:1px solid var(--line);border-radius:var(--radius);padding:25px 22px;min-height:225px;transition:transform .25s,border-color .25s}
+    .learn-card:hover{transform:translateY(-5px);border-color:#666}
+    .icon{width:42px;height:42px;border:1px solid #555;border-radius:13px;display:grid;place-items:center;color:#eee;margin-bottom:28px}
+    .icon svg{width:20px;height:20px}
+    .learn-card h3{font-size:16px;line-height:1.25;margin:0 0 10px}
+    .learn-card p{color:#929292;font-size:12px;margin:0}
+    .audience{display:grid;grid-template-columns:.85fr 1.15fr;gap:70px;align-items:center}
+    .audience-visual{min-height:390px;border:1px solid var(--line);border-radius:24px;position:relative;overflow:hidden;background:radial-gradient(ellipse at 50% 65%,#292929 0,#111 43%,#090909 75%)}
+    .audience-visual:before,.audience-visual:after{content:"";position:absolute;left:12%;right:12%;height:1px;background:linear-gradient(90deg,transparent,#777,transparent)}
+    .audience-visual:before{top:25%}.audience-visual:after{top:75%}
+    .big-note{position:absolute;inset:0;display:grid;place-items:center;font-size:170px;font-weight:200;color:rgba(255,255,255,.11);letter-spacing:-.1em}
+    .audience-visual span{position:absolute;bottom:25px;left:26px;color:#aaa;font-size:10px;letter-spacing:.18em;text-transform:uppercase}
+    .check-list{list-style:none;padding:0;margin:30px 0 0;display:grid;gap:17px}
+    .check-list li{display:flex;gap:13px;align-items:flex-start;color:#d5d5d5;font-size:15px}
+    .check{flex:0 0 22px;width:22px;height:22px;border:1px solid #777;border-radius:50%;display:grid;place-items:center;color:white;font-size:12px}
+    .product-band{background:#0c0c0c}
+    .product-panel{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center;border:1px solid var(--line);border-radius:28px;padding:clamp(26px,5vw,58px);background:radial-gradient(ellipse at 85% 50%,#222 0,transparent 48%),#0b0b0b}
+    .product-panel p{color:#aaa;max-width:440px}
+    .product-keys{height:220px;display:flex;align-items:flex-end;justify-content:center;gap:4px;transform:perspective(500px) rotateX(12deg)}
+    .product-keys span{height:170px;flex:1;max-width:48px;background:linear-gradient(#fff,#cfcfcf);border-radius:0 0 5px 5px;box-shadow:0 8px 12px #000}
+    .product-keys span:nth-child(2n){height:128px;background:linear-gradient(#222,#050505);border:1px solid #555;max-width:25px;margin:0 -15px;z-index:2}
+    .product-keys span:nth-child(5n){height:118px}
+    .offer{padding:110px 0}
+    .offer-card{max-width:760px;margin:auto;text-align:center;border:1px solid #555;border-radius:28px;padding:clamp(32px,6vw,68px) 25px;background:radial-gradient(ellipse at 50% 0,rgba(255,255,255,.12),transparent 55%),#0b0b0b;box-shadow:0 25px 90px rgba(0,0,0,.35)}
+    .offer-card h2{margin:14px 0 8px}
+    .offer-label{color:#aaa;font-size:13px}
+    .offer-price{font-size:clamp(52px,8vw,78px);font-weight:900;letter-spacing:-.075em;line-height:1.1;margin:18px 0 26px}
+    .offer-card .btn{min-width:min(100%,360px);padding:19px 25px}
+    .offer-note{color:#777;font-size:11px;margin-top:18px}
+    .faq-wrap{max-width:820px;margin:auto}
+    .faq-wrap .section-head{text-align:center;margin-inline:auto}
+    .faq-list{border-top:1px solid var(--line)}
+    details{border-bottom:1px solid var(--line)}
+    summary{cursor:pointer;list-style:none;padding:22px 4px;display:flex;justify-content:space-between;align-items:center;gap:20px;font-size:15px;font-weight:700}
+    summary::-webkit-details-marker{display:none}
+    summary:after{content:"+";font-size:24px;font-weight:300;color:#aaa;transition:transform .25s}
+    details[open] summary:after{transform:rotate(45deg)}
+    details p{color:#a6a6a6;font-size:14px;max-width:690px;margin:0;padding:0 30px 22px 4px;animation:faqIn .25s ease}
+    @keyframes faqIn{from{opacity:0;transform:translateY(-5px)}to{opacity:1;transform:translateY(0)}}
+    footer{border-top:1px solid var(--line);padding:35px 0 95px;color:#777;font-size:11px}
+    .footer-row{display:flex;align-items:center;justify-content:space-between;gap:22px;flex-wrap:wrap}
+    .footer-links{display:flex;gap:22px;flex-wrap:wrap}
+    .footer-links a:hover{color:#fff}
+    .mobile-buy{display:none}
+    .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+    .reveal.visible{opacity:1;transform:translateY(0)}
+    @media(max-width:900px){.hero{grid-template-columns:1fr;min-height:auto;padding-top:75px}.hero-art{min-height:360px;grid-row:1}.hero-copy{font-size:16px}.learn-grid{grid-template-columns:repeat(2,1fr)}.audience{gap:35px}.product-panel{gap:20px}}
+    @media(max-width:640px){.wrap{width:min(100% - 34px,var(--max))}.nav{height:66px}.nav-links{display:none}.nav-cta{padding:10px 13px;font-size:10px}.brand{font-size:11px}.hero{padding-top:36px;padding-bottom:60px;gap:4px}.hero-art{min-height:255px;grid-row:auto}.hero-art svg{width:120%}.art-label{bottom:0;right:0;font-size:8px}.hero h1{font-size:clamp(42px,13vw,60px)}.hero-copy{font-size:14px}.hero-actions{align-items:flex-start;flex-direction:column;gap:16px}.btn{width:100%;padding:16px}.price-inline{font-size:21px}section{padding:76px 0}.section-head{margin-bottom:30px}.learn-grid{gap:9px}.learn-card{padding:19px 15px;min-height:205px}.learn-card h3{font-size:14px}.learn-card p{font-size:11px}.icon{margin-bottom:22px}.audience{grid-template-columns:1fr;gap:25px}.audience-visual{min-height:240px}.big-note{font-size:125px}.product-panel{grid-template-columns:1fr;padding:28px 20px}.product-keys{height:150px}.product-keys span{height:120px}.product-keys span:nth-child(2n){height:90px}.offer{padding:78px 0}.offer-card{border-radius:22px}.offer-card .btn{font-size:11px}.footer-row{align-items:flex-start;flex-direction:column}.mobile-buy{display:flex;position:fixed;z-index:30;bottom:0;left:0;right:0;padding:11px 16px calc(11px + env(safe-area-inset-bottom));background:rgba(5,5,5,.94);backdrop-filter:blur(16px);border-top:1px solid var(--line);align-items:center;justify-content:space-between;gap:12px}.mobile-buy .mobile-price{font-weight:850;font-size:17px;white-space:nowrap}.mobile-buy .mobile-price small{display:block;color:#888;font-size:9px;font-weight:600;letter-spacing:.1em}.mobile-buy .btn{width:auto;padding:13px 17px;font-size:10px;white-space:nowrap}footer{padding-bottom:110px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
+  </style>
+</head>
+<body>
+  <script>
+    // CONFIGURAÇÃO: altere estes três endereços em um único lugar.
+    const CHECKOUT_URL = "https://pay.kiwify.com.br/l1b8lTT";
+    const PRIVACY_URL = "#";
+    const TERMS_URL = "#";
+  </script>
+  <header class="topbar">
+    <div class="wrap nav">
+      <a class="brand" href="#inicio" aria-label="TECLADO DO ZERO - início">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span>TECLADO <span style="color:#888">DO ZERO</span></span>
+      </a>
+      <nav class="nav-links" aria-label="Navegação principal">
+        <a href="#aprendizado">O que você vai aprender</a><a href="#para-quem">Para quem é</a><a href="#duvidas">Dúvidas</a>
+      </nav>
+      <a class="nav-cta buy-link" href="#oferta">QUERO COMEÇAR <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main>
+    <section class="wrap hero" id="inicio" style="border:0">
+      <div class="hero-content reveal">
+        <div class="eyebrow">Sua jornada musical começa aqui</div>
+        <h1>APRENDA A TOCAR <span>TECLADO DO ZERO!</span></h1>
+        <p class="hero-copy">Mesmo que você nunca tenha tocado uma tecla na vida, comece sua jornada musical com aulas em vídeo.</p>
+        <div class="hero-actions">
+          <a class="btn buy-link" href="#oferta">QUERO APRENDER TECLADO AGORA! <span aria-hidden="true">↗</span></a>
+          <div class="price-inline">R$ 127,00<small>Investimento no curso</small></div>
+        </div>
+        <p class="micro">Um primeiro passo para transformar sua vontade de tocar em aprendizado.</p>
+      </div>
+      <div class="hero-art reveal" aria-label="Ilustração de um teclado musical em cenário escuro">
+        <div class="glow"></div>
+        <svg viewBox="0 0 760 500" role="img" aria-label="Teclado musical preto e branco sob iluminação cinematográfica">
+          <defs>
+            <linearGradient id="body" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#444"/><stop offset=".25" stop-color="#171717"/><stop offset="1" stop-color="#050505"/></linearGradient>
+            <linearGradient id="side" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#555"/><stop offset="1" stop-color="#090909"/></linearGradient>
+            <linearGradient id="key" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#fff"/><stop offset="1" stop-color="#bcbcbc"/></linearGradient>
+            <linearGradient id="shine" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".5"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+          </defs>
+          <ellipse cx="380" cy="420" rx="315" ry="35" fill="#000" opacity=".8"/>
+          <path d="M95 170 L620 120 Q650 118 666 145 L690 340 Q694 357 673 364 L150 420 Q126 424 119 403 L75 205 Q70 181 95 170Z" fill="url(#body)" stroke="#777" stroke-opacity=".55" stroke-width="2"/>
+          <path d="M95 170 L620 120 Q650 118 666 145 L690 340 L161 397 L119 207 Q113 184 95 170Z" fill="url(#side)" opacity=".8"/>
+          <path d="M113 207 L665 155 L683 337 L154 393Z" fill="#080808" stroke="#555" stroke-width="2"/>
+          <g transform="translate(133 218) skewY(-5.4)">
+            <rect width="520" height="153" rx="5" fill="#090909" stroke="#777"/>
+            <g fill="url(#key)" stroke="#777" stroke-width="1">
+              <rect x="4" y="4" width="36" height="145"/><rect x="41" y="4" width="36" height="145"/><rect x="78" y="4" width="36" height="145"/><rect x="115" y="4" width="36" height="145"/><rect x="152" y="4" width="36" height="145"/><rect x="189" y="4" width="36" height="145"/><rect x="226" y="4" width="36" height="145"/><rect x="263" y="4" width="36" height="145"/><rect x="300" y="4" width="36" height="145"/><rect x="337" y="4" width="36" height="145"/><rect x="374" y="4" width="36" height="145"/><rect x="411" y="4" width="36" height="145"/><rect x="448" y="4" width="36" height="145"/><rect x="485" y="4" width="31" height="145"/>
+            </g>
+            <g fill="#080808" stroke="#444" stroke-width="1">
+              <rect x="29" y="4" width="22" height="91" rx="0 0 3 3"/><rect x="66" y="4" width="22" height="91" rx="0 0 3 3"/><rect x="140" y="4" width="22" height="91" rx="0 0 3 3"/><rect x="177" y="4" width="22" height="91" rx="0 0 3 3"/><rect x="214" y="4" width="22" height="91" rx="0 0 3 3"/><rect x="288" y="4" width="22" height="91" rx="0 0 3 3"/><rect x="325" y="4" width="22" height="91" rx="0 0 3 3"/><rect x="399" y="4" width="22" height="91" rx="0 0 3 3"/><rect x="436" y="4" width="22" height="91" rx="0 0 3 3"/><rect x="473" y="4" width="22" height="91" rx="0 0 3 3"/>
+            </g>
+          </g>
+          <path d="M120 190 L640 143" stroke="url(#shine)" stroke-width="4" opacity=".6"/>
+          <g fill="#aaa"><circle cx="158" cy="190" r="4"/><circle cx="180" cy="188" r="4"/><circle cx="202" cy="186" r="4"/><circle cx="224" cy="184" r="4"/><circle cx="246" cy="182" r="4"/></g>
+          <path d="M90 170 L620 120" stroke="#eee" stroke-opacity=".4" stroke-width="2"/>
+        </svg>
+        <div class="art-label">Comece do primeiro acorde</div>
+      </div>
+    </section>
+
+    <section id="aprendizado">
+      <div class="wrap">
+        <div class="section-head reveal"><div class="kicker">O seu começo na música</div><h2>O que você vai aprender</h2><p class="section-intro">Uma introdução ao universo do teclado, pensada para quem quer dar os primeiros passos com orientação em vídeo.</p></div>
+        <div class="learn-grid">
+          <article class="learn-card reveal"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 5h16v14H4zM8 5v8m4-8v8m4-8v8"/></svg></div><h3>Comece do absoluto zero</h3><p>Conteúdo voltado a quem ainda não tem experiência com o teclado.</p></article>
+          <article class="learn-card reveal"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="m10 8 6 4-6 4z"/></svg></div><h3>Aulas em vídeo</h3><p>Aprenda acompanhando as explicações apresentadas nas videoaulas.</p></article>
+          <article class="learn-card reveal"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 18V6m0 12h16M7 15l4-5 3 3 5-7"/></svg></div><h3>Desenvolva habilidades musicais</h3><p>Dê espaço à prática e desenvolva suas habilidades passo a passo.</p></article>
+          <article class="learn-card reveal"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div><h3>Suas primeiras músicas</h3><p>Comece a construir o caminho para tocar músicas de que você gosta.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="para-quem">
+      <div class="wrap audience">
+        <div class="audience-visual reveal"><div class="big-note">♪</div><span>Todo começo tem sua primeira nota</span></div>
+        <div class="reveal"><div class="kicker">Feito para dar o primeiro passo</div><h2>Para quem é o TECLADO DO ZERO?</h2><p class="section-intro">Você não precisa chegar sabendo. O curso é apresentado para quem quer começar a aprender.</p>
+          <ul class="check-list">
+            <li><span class="check">✓</span><span>Para quem nunca tocou teclado.</span></li>
+            <li><span class="check">✓</span><span>Para iniciantes que não sabem por onde começar.</span></li>
+            <li><span class="check">✓</span><span>Para quem sempre sonhou em aprender música.</span></li>
+            <li><span class="check">✓</span><span>Para quem deseja desenvolver uma nova habilidade.</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-band">
+      <div class="wrap">
+        <div class="product-panel reveal">
+          <div><div class="kicker">Conheça o curso</div><h2>TECLADO DO ZERO</h2><p>Um curso online com videoaulas para acompanhar sua iniciação no teclado. Um convite para sair da vontade de aprender e começar sua jornada musical.</p><a class="btn buy-link" href="#oferta">QUERO CONHECER A OFERTA ↗</a></div>
+          <div class="product-keys" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="offer" id="oferta">
+      <div class="wrap">
+        <div class="offer-card reveal">
+          <div class="kicker">Sua jornada começa com uma escolha</div>
+          <h2>TECLADO DO ZERO</h2>
+          <p class="offer-label">Acesso ao curso por apenas</p>
+          <div class="offer-price">R$ 127,00</div>
+          <a class="btn buy-link" href="https://SEU-LINK-DA-KIWIFY">QUERO GARANTIR MEU ACESSO <span aria-hidden="true">↗</span></a>
+          <p class="offer-note">Ao clicar, você será direcionado para a página de checkout.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="duvidas">
+      <div class="wrap faq-wrap">
+        <div class="section-head reveal"><div class="kicker">Perguntas frequentes</div><h2>Tire suas dúvidas</h2><p class="section-intro">Informações essenciais para você conhecer melhor o curso.</p></div>
+        <div class="faq-list reveal">
+          <details><summary>Preciso saber tocar teclado para começar?</summary><p>Não. O TECLADO DO ZERO foi pensado para pessoas que desejam começar mesmo sem nunca ter tocado uma tecla.</p></details>
+          <details><summary>O curso é indicado para iniciantes?</summary><p>Sim. A proposta do curso é ajudar quem está começando do zero a dar os primeiros passos no teclado.</p></details>
+          <details><summary>Como são disponibilizadas as aulas?</summary><p>O conteúdo do curso é disponibilizado por meio de videoaulas.</p></details>
+          <details><summary>Como faço para comprar?</summary><p>Clique em um dos botões de acesso nesta página. Você será direcionado ao checkout da Kiwify para realizar a compra.</p></details>
+          <details><summary>Onde acesso o curso depois da compra?</summary><p>As orientações de acesso ao conteúdo são apresentadas após a confirmação da compra, conforme as instruções da plataforma de checkout.</p></details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-row">
+      <div><div class="brand"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>TECLADO <span style="color:#888">DO ZERO</span></span></div><p>© <span id="year"></span> TECLADO DO ZERO. Todos os direitos reservados.</p></div>
+      <nav class="footer-links" aria-label="Links legais"><a id="privacy-link" href="#">Política de privacidade</a><a id="terms-link" href="#">Termos de uso</a></nav>
+    </div>
+  </footer>
+
+  <div class="mobile-buy"><div class="mobile-price">R$ 127,00<small>TECLADO DO ZERO</small></div><a class="btn buy-link" href="#oferta">QUERO ACESSAR ↗</a></div>
+
+  <script>
+    // Todos os botões de compra usam o mesmo endereço configurado acima.
+    document.querySelectorAll(".buy-link").forEach(link => {
+      link.href = CHECKOUT_URL;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+    });
+    document.getElementById("privacy-link").href = PRIVACY_URL;
+    document.getElementById("terms-link").href = TERMS_URL;
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Entrada suave dos elementos ao rolar a página.
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {threshold: 0.12});
+    document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+
+    // Mantém apenas uma pergunta aberta por vez.
+    document.querySelectorAll(".faq-list details").forEach(item => {
+      item.addEventListener("toggle", () => {
+        if (item.open) {
+          document.querySelectorAll(".faq-list details").forEach(other => {
+            if (other !== item) other.open = false;
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
